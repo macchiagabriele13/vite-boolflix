@@ -1,8 +1,13 @@
 <script>
 
 import { store } from '../store.js'
+import MovieItem from './MovieItem.vue';
+
 export default {
     name: "MoviesList",
+    components: {
+        MovieItem,
+    },
     data() {
         return {
             store
@@ -14,6 +19,14 @@ export default {
 
 <template>
 
+    <div class="container">
+        <div class="row">
+
+            <MovieItem :movie="movie" v-for="movie in store.params.movies" />
+
+        </div>
+
+    </div>
 
 </template>
 
