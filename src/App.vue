@@ -1,7 +1,19 @@
 <script>
 import { store } from './store.js'
+import SiteHeader from './components/SiteHeader.vue'
+import SearchBox from './components/SearchBox.vue'
+import SiteMain from './components/SiteMain.vue'
+import MoviesList from './components/MoviesList.vue'
+
+
 export default {
   name: 'App',
+  components: {
+    SiteHeader,
+    SearchBox,
+    SiteMain,
+    MoviesList,
+  },
   data() {
     return {
       store
@@ -14,6 +26,19 @@ export default {
 </script>
 
 <template>
+
+  <SiteHeader />
+
+  <SiteMain />
+
+
+
+
+
+
+  <footer>
+
+  </footer>
 
 </template>
 
