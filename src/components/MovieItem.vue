@@ -12,7 +12,8 @@ export default {
     props: {
         movie: Object,
         langList: Array,
-    }
+    },
+
 }
 
 </script>
@@ -22,11 +23,17 @@ export default {
 
     <div class="col">
         <img :src="`https://image.tmdb.org/t/p/w342${movie.poster_path}`" :alt="movie.title">
-        <h3>{{ movie.title }}</h3>
-        <h4>{{ movie.original_title }}</h4>
+        <h3>{{ movie.title || movie.name }}</h3>
+        <h4>{{ movie.original_title || movie.original_name }}</h4>
         <h5 v-if="!langList.includes(movie.original_language)">{{ movie.original_language }}</h5>
         <span v-else class="fi" :class="'fi-' + (movie.original_language)"></span>
-        <h6>{{ movie.vote_average }}</h6>
+
+        <small>Rating: {{ store.voteStar(movie.vote_average) }} / 5</small>
+        <div class="stars">
+            <font-awesome-icon icon="fa-solid fa-star" v-for="star in store.voteStar(movie.vote_average)" />
+
+        </div>
+
     </div>
 
 

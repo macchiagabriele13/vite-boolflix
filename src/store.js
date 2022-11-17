@@ -7,6 +7,7 @@ export const store = reactive({
         appKey: 'be58437321d4fa4b419a747407eb817c',
         query: '',
         movies: '',
+
     },
     callApi: (url) => {
         axios.get(url)
@@ -21,5 +22,8 @@ export const store = reactive({
             .catch(err => {
                 store.error = err.message
             })
+    },
+    voteStar(vote) {
+        return Math.round(vote / 2)
     }
 })
