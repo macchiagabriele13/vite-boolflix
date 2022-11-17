@@ -30,8 +30,7 @@ export default {
 
         <small>Rating: {{ store.voteStar(movie.vote_average) }} / 5</small>
         <div class="stars">
-            <font-awesome-icon icon="fa-solid fa-star" v-for="star in store.voteStar(movie.vote_average)" />
-
+            <i class="fa-solid fa-star" v-for="star in store.voteStar(movie.vote_average)"></i>
         </div>
 
     </div>
