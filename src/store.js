@@ -2,7 +2,7 @@ import { reactive } from 'vue'
 import axios from 'axios'
 
 export const store = reactive({
-    url: 'https://api.themoviedb.org/3/search/movie',
+    url: 'https://api.themoviedb.org/3/search/multi',
     params: {
         appKey: 'be58437321d4fa4b419a747407eb817c',
         query: '',

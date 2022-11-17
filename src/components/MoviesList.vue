@@ -10,7 +10,8 @@ export default {
     },
     data() {
         return {
-            store
+            store,
+            langList: ["en", "it", "ja", "es", "fr", "de"],
         }
     },
 }
@@ -22,7 +23,7 @@ export default {
     <div class="container">
         <div class="row">
 
-            <MovieItem :movie="movie" v-for="movie in store.params.movies" />
+            <MovieItem :langList="langList" :movie="movie" v-for="movie in store.params.movies" />
 
         </div>
 
