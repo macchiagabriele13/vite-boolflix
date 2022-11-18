@@ -21,7 +21,7 @@ export default {
 <template>
 
     <div class="container">
-        <div class="row">
+        <div class="row g-5">
 
             <MovieItem :langList="langList" :movie="movie" v-for="movie in store.params.movies" />
 

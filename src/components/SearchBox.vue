@@ -17,10 +17,10 @@ export default {
     <section>
 
         <div class="form-group d-flex justify-content-center">
-            <input type="text" class="form-control w-50" name="" id="" aria-describedby="helpId"
-                placeholder="Scrivi il titolo che stai cercando..." v-model="store.params.query"
-                @keyup.enter="$emit('searchList')">
-            <button type="button" class="btn btn-primary" @click="$emit('searchList')">Cerca</button>
+            <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Cosa cerchi?"
+                v-model="store.params.query" @keyup.enter="$emit('searchList')">
+            <button type="button" class="btn btn-danger" @click="$emit('searchList')"><i
+                    class="fa-solid fa-magnifying-glass"></i></button>
         </div>
     </section>
 
@@ -30,6 +30,7 @@ export default {
 header {
     text-align: center;
     padding-top: 1rem;
+    padding-right: 1rem;
 }
 </style>
 
